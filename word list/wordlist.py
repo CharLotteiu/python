@@ -19,6 +19,7 @@ for i in range(5):
     path = str(i+1) + '.txt'
     f = open(path)
     text.append(f.read())
+    f.close()
 
 for x in text:
     all_the_text += x
