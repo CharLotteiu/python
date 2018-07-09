@@ -1,2 +1,2 @@
 # python
-这是我在github上创建的第一个仓库
+这里存的都是我平时的 python 作业
