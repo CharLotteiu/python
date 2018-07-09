@@ -16,8 +16,8 @@ all_the_text=""
 path=""
 
 for i in range(5):
-    path = str(i+1) + '.txt'
-    f = open(path)
+    path = "corpara/"+str(i+1) + '.txt'
+    f = open(path,'r', encoding='UTF-8')
     text.append(f.read())
     f.close()
 
@@ -34,9 +34,9 @@ for word in all_the_text.split():
 
 wordlist = collections.OrderedDict(sorted(wordlist.items(), key = lambda t: -t[1]))
             
-print "词频最高Top 10"
-print "freq*	word\n"
-print "-----   -----\n"
+print ("词频最高Top 10")
+print ("freq*	word\n")
+print ("-----   -----\n")
 
 j=0
 for key,value in wordlist.items():
@@ -48,9 +48,9 @@ for key,value in wordlist.items():
     
 wordlist1 = collections.OrderedDict(sorted(wordlist.items(), key = lambda t: t[1]))
 
-print "\n词频最低Top 10"
-print "freq*	word\n"
-print "-----   -----\n"
+print ("\n词频最低Top 10")
+print ("freq*	word\n")
+print ("-----   -----\n")
 
 j=0
 for key,value in wordlist1.items():
