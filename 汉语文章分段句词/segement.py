@@ -30,7 +30,9 @@ def cutsentence(text):
 
 def cutword(text):
     wordslist = list()
-    wordslist = jieba.cut(text, cut_all=True)
+    sentenceslist = cutsentence(text)
+    for sentence in sentenceslist:
+        wordslist.extend(jieba.cut(sentence, cut_all=True))
     print('\n以下是调用结巴分词的结果：\n')
     print(wordslist)
     return wordslist
