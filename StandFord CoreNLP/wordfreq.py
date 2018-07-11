@@ -88,7 +88,7 @@ class WordFreq:
         X_cn.append(sum(cixinotherV_cn))
         
         plt.rcParams['font.sans-serif']=['SimHei'] #解决中文乱码
-        plt.figure(figsize=(6,9))
+        plt.figure(figsize=(9,9))
         plt.pie(X_en,labels=labels_en,autopct='%1.2f%%') #画饼图（数据，数据对应的标签，百分数保留两位小数点）
         plt.title("英文词性分布图")
         plt.show()
@@ -97,9 +97,6 @@ class WordFreq:
         plt.pie(X_cn,labels=labels_cn,autopct='%1.2f%%') #画饼图（数据，数据对应的标签，百分数保留两位小数点）
         plt.title("中文词性分布图")
         plt.show()
-        
-    
-    
     
     def run(self,files):
         self.duquwenjian(files)
